@@ -5,21 +5,14 @@ import java.io.IOException;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
-public class InventoryManagementSystem {
+public abstract class InventoryFactory {
 
-	private Inventory inventory;
-
-	public static void main(String[] args) {
-		InventoryManagementSystem inventoryManagementSystem = new InventoryManagementSystem();
-		inventoryManagementSystem.readJson();
-		inventoryManagementSystem.calculateInventoryValue();
-		inventoryManagementSystem.writeToJson();
-	}
+	protected Inventory inventory;
 
 	/**
 	 * Calculating inventory value for rice,wheat,pulses
 	 */
-	private void calculateInventoryValue() {
+	protected void calculateInventoryValue() {
 		long inventoryValueRice = inventory.getRiceList().stream().map(rice -> rice.getWeight() * rice.getPricePerKg())
 				.reduce(0L, (total, value) -> total + value);
 		System.out.println("Inventory value for rice: " + inventoryValueRice);
@@ -38,7 +31,7 @@ public class InventoryManagementSystem {
 	 * Reading the Json file and convert to java object using Jackson ObjectMapper
 	 * readValue method
 	 */
-	private void readJson() {
+	protected void readJson() {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			// JSON file to Java object
@@ -53,7 +46,7 @@ public class InventoryManagementSystem {
 	 * Converting the java object to Json string using Jackson ObjectMapper
 	 * writeValueAsString
 	 */
-	private void writeToJson() {
+	protected void writeToJson() {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			// Java objects to JSON string - compact-print
