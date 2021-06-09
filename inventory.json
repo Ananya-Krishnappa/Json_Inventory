@@ -1,0 +1,34 @@
+{
+	"riceList": [
+			{
+				"name": "basmati rice",
+				"weight": 10,
+				"pricePerKg": 52
+			},
+			{
+				"name": "sona rice",
+				"weight": 10,
+				"pricePerKg": 52
+			}
+		],
+	"pulsesList": [
+			{
+				"name": "dal",
+				"weight": 20,
+				"pricePerKg": 90	
+			},
+			{
+				"name": "bajri",
+				"weight": 25,
+				"pricePerKg": 88
+			}
+		],
+	"wheatList": [
+			{
+				"name": "gehu",
+				"weight": 25,
+				"pricePerKg": 70
+			}
+		]
+
+}
