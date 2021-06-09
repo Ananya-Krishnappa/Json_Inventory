@@ -42,7 +42,7 @@ public class InventoryManagementSystem {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			// JSON file to Java object
-			inventory = mapper.readValue(new File("E:\\workspace\\javaSamples\\inventory.json"), Inventory.class);
+			inventory = mapper.readValue(new File("E:\\workspace\\JsonInventory\\inventory.json"), Inventory.class);
 			System.out.println(inventory.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
