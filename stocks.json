@@ -1,0 +1,35 @@
+{
+	"stockList": [
+		{
+			"name":"Advanced Micro Devices Inc",
+			"sharesList": [
+				{
+					"name": "mutual funds",
+					"noOfShare": 10,
+					"price": 52
+				},
+				{
+					"name": "exchange traded funds",
+					"noOfShare": 10,
+					"price": 52
+				}
+			]
+		},
+		{
+			"name":"Apple Inc",
+			"sharesList": [
+				{
+					"name": "mutual funds",
+					"noOfShare": 30,
+					"price": 59
+				},
+				{
+					"name": "exchange traded funds",
+					"noOfShare": 100,
+					"price": 58
+				}
+			]
+		}
+	]
+	
+}
